@@ -1,0 +1,415 @@
+\chapter{Analyse et conception du système}
+\newpage
+\section{Introduction}
+
+Le deuxième chapitre est consacré à l’analyse et à la conception du système. Nous y présentons les besoins fonctionnels et non fonctionnels, les diagrammes UML ainsi que l’architecture générale de la solution proposée
+
+\section{Identification des acteurs}
+
+\subsection{Comptable} 
+Le comptable s’occupe de l’importation des factures dans le système. 
+L'utilisateur peut consulter les résultats d’extraction, suivre l’état des factures et vérifier les informations extraites.
+
+\subsection{Responsable financier}
+
+Le responsable financier est chargé d’analyser les factures en attente de décision. 
+L'utilisateur peut approuver une facture ou rejeter une facture, et l'utilisateur doit ajouter un commentaire obligatoire pour expliquer la décision.
+
+\subsection{Administrateur}
+
+L’administrateur assure la gestion du système. 
+Gérer les utilisateurs, configurer les paramètres de l’intelligence artificielle et consulter le journal des actions permettent de garantir la traçabilité.
+
+\section{Identification des besoins}
+
+\subsection{Besoins fonctionnels}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.4}
+	
+	\begin{tabularx}{\textwidth}{|p{3cm}|c|X|}
+		\hline
+		\rowcolor{blue!20}
+		\textbf{Acteur} & \textbf{ID} & \textbf{Besoin fonctionnel} \\ \hline
+		
+		\multirow{4}{3cm}{Administrateur}
+		& BF1 & Le système doit permettre à l’administrateur de s’authentifier. \\ \cline{2-3}
+		& BF2 & Le système doit permettre à l’administrateur de gérer les utilisateurs. \\ \cline{2-3}
+		& BF3 & Le système doit permettre à l’administrateur de configurer les seuils de confiance de l’IA. \\ \cline{2-3}
+		& BF4 & Le système doit permettre à l’administrateur de consulter le journal des actions. \\ \hline
+		
+		\multirow{5}{3cm}{Comptable}
+		& BF5 & Le système doit permettre au comptable de s’authentifier. \\ \cline{2-3}
+		& BF6 & Le système doit permettre au comptable d’importer les factures fournisseurs. \\ \cline{2-3}
+		& BF7 & Le système doit extraire automatiquement les données des factures à l’aide de l’OCR. \\ \cline{2-3}
+		& BF8 & Le système doit permettre au comptable de consulter les résultats d’extraction. \\ \cline{2-3}
+		& BF9 & Le système doit permettre au comptable de gérer les factures selon leurs statuts. \\ \hline
+		
+		\multirow{3}{3cm}{Responsable financier}
+		& BF10 & Le système doit permettre au responsable financier de s’authentifier. \\ \cline{2-3}
+		& BF11 & Le système doit permettre au responsable financier d’approuver ou de rejeter les factures avec un commentaire obligatoire. \\ \cline{2-3}
+		& BF12 & Le système doit permettre au responsable financier de consulter le tableau de bord financier. \\ \hline
+		
+	\end{tabularx}
+	
+	\caption{Besoins fonctionnels du système par acteur}
+	\label{tab:besoins_fonctionnels}
+\end{table}
+
+\subsection{Besoins non fonctionnels}
+
+Le système doit également respecter les contraintes suivantes :
+
+\begin{itemize}
+    \item \textbf{Performance} : traiter les factures rapidement ;
+    \item \textbf{Sécurité} : garantir un accès sécurisé grâce à la gestion des rôles ;
+    \item \textbf{Fiabilité} : réduire les erreurs qui surviennent pendant le traitement des données ;
+    \item \textbf{Ergonomie} : offrir une interface simple à utiliser ;
+    \item \textbf{Scalabilité} : faciliter la gestion d’un grand nombre de factures ;
+    \item \textbf{Disponibilité} : Disponibilité signifie que le système reste accessible à tout moment ;
+    \item \textbf{Traçabilité} : enregistrer les actions du système.
+\end{itemize}
+
+\section{Diagramme de cas d’utilisation global}
+
+Le diagramme de cas d’utilisation global présente les interactions entre les différents acteurs du système, à savoir le comptable, le responsable financier et l’administrateur. 
+Il permet de visualiser les principales fonctionnalités offertes par la plateforme.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{usecase.jpg}
+\caption{Diagramme de cas d’utilisation global du système}
+\label{fig:usecase_global}
+\end{figure}
+
+\FloatBarrier
+\section{Diagramme de classes global}
+
+Le diagramme de classes global ci-dessous illustre la structure de la solution Inovoice IA. Il présente les entités du système, leurs attributs ainsi que les relations entre les différents acteurs et composants.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{diagramme_classes_global.jpg}
+	\caption{Diagramme de classes global du système}
+	\label{fig:diagramme_classes_global}
+\end{figure}
+
+\FloatBarrier
+\section{Architecture du travail}
+
+\subsection{Architecture physique : Architecture 3-tiers }
+
+
+L’architecture physique du système repose sur une architecture 3-tiers\cite{architecture3tiers} permettant de séparer l’interface utilisateur, la logique métier et la base de données. Cette organisation facilite la maintenance, la sécurité et l’évolution du système.
+
+Notre architecture est composée des éléments suivants :
+
+\begin{itemize}
+	
+	\item \textbf{Frontend :} représente l’interface utilisateur développée avec React.
+	
+	\item \textbf{Backend :} assure la logique métier et la gestion des requêtes via FastAPI.
+	
+	\item \textbf{Base de données :} PostgreSQL permet le stockage des utilisateurs, factures et validations.
+	
+	\item \textbf{Services OCR/IA :} utilisés pour l’extraction et l’analyse automatique des données.
+	
+	\item \textbf{Workflow n8n :} permet l’automatisation des traitements et des processus du système.
+	
+\end{itemize}
+Comme présenté dans la figure
+\ref{fig:architecture_physique}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{architecture_physique.jpg}
+\caption{Architecture physique du système}
+\label{fig:architecture_physique}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Architecture logique : MVC}
+L’architecture logique du système s’appuie sur plusieurs couches ; ces couches assurent la clarté et la modularité du système.
+
+Cette architecture logique repose également sur le modèle \textbf{MVC}, où le frontend représente la couche \textbf{View}, le backend représente la couche \textbf{Controller} et la base de données correspond à la couche \textbf{Model}.
+
+
+\begin{itemize}
+    \item \textbf{Présentation (Frontend)} : La Présentation (Frontend) gère l'interface utilisateur ainsi que les interactions ;
+    \item \textbf{Contrôle (Backend)} : assure la logique métier et les traitements ;
+    \item \textbf{Données (Base de données)} : Données (Base de données) assure le stockage des informations ;
+    \item \textbf{Workflow (n8n)} : gère les traitements automatisés ;
+    \item \textbf{Services IA / OCR} : Les Services IA / OCR permettent d’extraire et d’analyser les données.
+\end{itemize}
+Comme présenté dans la figure
+\ref{fig:architecture_logique}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{architecture_logique.jpg}
+\caption{Architecture logique du système}
+\label{fig:architecture_logique}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Pilotage avec Scrum}
+
+Dans le cadre de notre projet, nous avons adopté la méthodologie Agile Scrum. 
+Cette méthode permet d’organiser le travail en plusieurs itérations appelées sprints. 
+Chaque sprint regroupe un ensemble de fonctionnalités. Le sprint développe les fonctionnalités, teste les fonctionnalités et valide les fonctionnalités.
+
+\subsubsection{Répartition des rôles}
+
+L’équipe Scrum comprend les rôles suivants :
+
+
+
+\begin{itemize}
+    \item \textbf{Product Owner} : Product Owner définit les besoins et gère le backlog produit ;
+    \item \textbf{Scrum Master} : Scrum Master veille à ce que le projet se passe bien et facilite le travail de l’équipe ;
+    \item \textbf{Équipe de développement} : Équipe de développement conçoit, développe et teste l’application.
+\end{itemize}
+Comme présenté dans la figure
+\ref{fig:scrum_team}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{scrum_team.jpg}
+\caption{Organisation de l’équipe Scrum}
+\label{fig:scrum_team}
+\end{figure}
+
+\FloatBarrier
+
+\subsubsection{Backlog produit}
+
+Le backlog produit regroupe l’ensemble des fonctionnalités à développer dans le système.
+Les fonctionnalités sont présentées sous forme de user stories.
+Comme présenté dans le tableau \ref{tab:product_backlog}.
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tabularx}{\textwidth}{|p{3cm}|c|X|X|}
+\hline
+\rowcolor{blue!20}
+\textbf{Acteur} & \textbf{ID} & \textbf{User Story} & \textbf{Description} \\
+\hline
+
+\multirow{4}{3cm}{Administrateur}
+& 1 & En tant qu’administrateur, je veux gérer les utilisateurs afin de contrôler l’accès au système. 
+& Ajouter, modifier ou supprimer les utilisateurs. \\ \cline{2-4}
+
+& 2 & En tant qu’administrateur, je veux configurer les seuils IA afin d’adapter le traitement automatique. 
+& Définir les seuils de confiance de l’intelligence artificielle. \\ \cline{2-4}
+
+& 3 & En tant qu’administrateur, je veux consulter le journal des actions afin d’assurer la traçabilité. 
+& Afficher l’historique des actions du système. \\ \cline{2-4}
+
+& 4 & En tant qu’administrateur, je veux sécuriser l’accès afin de protéger le système. 
+& Assurer l’authentification et la gestion des rôles. \\
+\hline
+
+\multirow{5}{3cm}{Comptable}
+& 5 & En tant que comptable, je veux importer une facture afin de lancer son traitement. 
+& Importer une facture au format PDF ou image. \\ \cline{2-4}
+
+& 6 & En tant que comptable, je veux extraire automatiquement les données afin de réduire la saisie manuelle. 
+& Extraire les données des factures avec l’OCR et l’IA. \\ \cline{2-4}
+
+& 7 & En tant que comptable, je veux consulter les résultats d’extraction afin de vérifier les données. 
+& Afficher les résultats d’extraction. \\ \cline{2-4}
+
+& 8 & En tant que comptable, je veux gérer les factures selon leurs statuts afin de suivre leur état. 
+& Consulter les factures en attente, validées et avec anomalies. \\ \cline{2-4}
+
+& 9 & En tant que comptable, je veux consulter le tableau de bord afin de suivre les indicateurs. 
+& Afficher les statistiques des factures. \\
+\hline
+
+\multirow{3}{3cm}{Responsable financier}
+& 10 & En tant que responsable financier, je veux approuver une facture avec un commentaire afin de justifier ma décision. 
+& Approuver une facture après analyse. \\ \cline{2-4}
+
+& 11 & En tant que responsable financier, je veux rejeter une facture avec un commentaire afin de signaler une anomalie. 
+& Rejeter une facture avec une justification obligatoire. \\ \cline{2-4}
+
+& 12 & En tant que responsable financier, je veux consulter le tableau de bord financier et exporter les données. 
+& Visualiser les indicateurs financiers et exporter les données. \\
+\hline
+
+\end{tabularx}
+
+\caption{Product Backlog du système}
+\label{tab:product_backlog}
+\end{table}
+
+
+
+\FloatBarrier
+\newpage
+\section{Planification des sprints}
+
+Le projet est réparti en trois sprints afin d’assurer une progression logique et cohérente du développement.
+
+Comme présenté dans la figure \ref{fig:planification_sprints}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{planification_sprints.jpg}
+\caption{Planification des sprints du projet}
+\label{fig:planification_sprints}
+\end{figure}
+
+\FloatBarrier
+
+\section{Environnement de travail}
+
+Dans cette section, nous présentons les équipements matériels et les outils logiciels utilisés pour la réalisation du projet.
+
+\subsection{Environnement matériel}
+
+La réalisation de ce projet a été effectuée en utilisant deux machines ayant les caractéristiques suivantes :
+
+\begin{table}[H]
+\centering
+\caption{Environnement matériel}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Caractéristique} & \textbf{PC 1} & \textbf{PC 2} \\
+\hline
+Système d’exploitation & Windows 10 & Windows 11 \\
+\hline
+Processeur & Intel Core i5 & Intel Core i5-9300H \\
+\hline
+Mémoire RAM & 16 Go & 16 Go \\
+\hline
+Disque dur & 512 Go (SSD) & 251 Go (SSD) \\
+\hline
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+\newpage
+\subsection{Environnement logiciel}
+
+\renewcommand{\arraystretch}{2.3}
+
+\begin{longtable}{|m{3cm}|m{3.5cm}|m{8cm}|}
+	\hline
+	
+	\rowcolor{blue!25}
+	\centering \textbf{Logo} &
+	\centering \textbf{Outil} &
+	\centering \textbf{Description}
+	\tabularnewline
+	\hline
+	
+	\endfirsthead
+	
+	\hline
+	\rowcolor{blue!25}
+	\centering \textbf{Logo} &
+	\centering \textbf{Outil} &
+	\centering \textbf{Description}
+	\tabularnewline
+	\hline
+	
+	\endhead
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/staruml.jpg}
+	&
+	\centering \textbf{Star UML}
+	&
+	Outil de modélisation UML utilisé pour concevoir les différents diagrammes du projet, notamment les diagrammes de cas d’utilisation, de séquence et de classes, facilitant ainsi l’analyse et la conception du système \cite{online:staruml}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/react.jpg}
+	&
+	\centering \textbf{React}
+	&
+	Bibliothèque JavaScript utilisée pour développer une interface utilisateur moderne, dynamique et interactive, garantissant une meilleure expérience utilisateur et une navigation fluide au sein de la plateforme \cite{online:react}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/fastapi.jpg}
+	&
+	\centering \textbf{FastAPI}
+	&
+	Framework Python utilisé pour le développement du backend du système, permettant la création d’API REST performantes, sécurisées et rapides pour assurer la communication entre les différentes composantes du projet \cite{online:fastapi}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/n8n.jpg}
+	&
+	\centering \textbf{n8n}
+	&
+	Plateforme d’automatisation utilisée pour orchestrer les workflows et automatiser les traitements liés à l’importation, l’analyse et la validation des factures dans le système \cite{online:n8n}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/ocr.jpg}
+	&
+	\centering \textbf{OCR / IA}
+	&
+	Technologies utilisées pour extraire automatiquement les données des factures fournisseurs, analyser leur contenu et attribuer des scores de confiance grâce aux mécanismes d’intelligence artificielle \cite{ocr}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/postgresql.jpg}
+	&
+	\centering \textbf{PostgreSQL}
+	&
+	Système de gestion de base de données relationnelle utilisé pour stocker les données du système de manière fiable, sécurisée et performante \cite{online:postgresql}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/pgadmin.jpg}
+	&
+	\centering \textbf{pgAdmin}
+	&
+	Interface graphique utilisée pour administrer la base de données PostgreSQL, gérer les tables, exécuter les requêtes SQL et superviser les données du système \cite{online:pgadmin}.
+	\tabularnewline
+	\hline
+
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/postman.jpg}
+	&
+	\centering \textbf{Postman}
+	&
+	Outil de test utilisé pour vérifier le bon fonctionnement des API REST développées, envoyer des requêtes HTTP et analyser les réponses retournées par le backend \cite{online:postman}.
+	\tabularnewline
+	\hline
+	
+	\centering \includegraphics[width=2.5cm]{figures/logos/vscode.jpg}
+	&
+	\centering \textbf{Visual Studio Code}
+	&
+	Environnement de développement utilisé pour écrire, organiser, maintenir et tester le code source du frontend et du backend du projet \cite{online:vscode}.
+	\tabularnewline
+	\hline
+	
+\end{longtable}
+
+
+
+\newpage
+\section{Diagramme de Gantt}
+
+Le diagramme de Gantt permet de représenter la planification temporelle des différentes tâches du projet. 
+Il donne une vision globale de l’enchaînement des sprints et de la durée prévue pour chaque étape.
+Comme présenté dans la figure \ref{fig:gantt}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{gantt.jpg}
+\caption{Diagramme de Gantt du projet}
+\label{fig:gantt}
+\end{figure}
+
+\FloatBarrier
+
+\section*{Conclusion}
+
+Dans ce chapitre, nous avons présenté l’analyse et la conception du système. Nous avons défini les besoins fonctionnels et non fonctionnels, puis élaboré les différents diagrammes UML ainsi que l’architecture générale de la solution proposée.

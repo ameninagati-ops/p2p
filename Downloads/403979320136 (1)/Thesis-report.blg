@@ -1,0 +1,18 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'Thesis-report.blg'
+[140] biber-MSWIN64:342> INFO - === 
+[180] Biber.pm:421> INFO - Reading 'Thesis-report.bcf'
+[284] Biber.pm:1002> INFO - Found 10 citekeys in bib section 0
+[298] Biber.pm:4487> INFO - Processing section 0
+[311] Biber.pm:4678> INFO - Looking for bibtex file 'Thesis-report.bib' for section 0
+[356] bibtex.pm:1713> INFO - LaTeX decoding ...
+[363] bibtex.pm:1519> INFO - Found BibTeX data source 'Thesis-report.bib'
+[367] Biber.pm:4678> INFO - Looking for bibtex file 'webographie.bib' for section 0
+[412] bibtex.pm:1713> INFO - LaTeX decoding ...
+[424] bibtex.pm:1519> INFO - Found BibTeX data source 'webographie.bib'
+[486] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[487] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[487] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'fr-FR'
+[487] Biber.pm:4313> INFO - No sort tailoring available for locale 'fr-FR'
+[502] bbl.pm:676> INFO - Writing 'Thesis-report.bbl' with encoding 'UTF-8'
+[506] bbl.pm:779> INFO - Output to Thesis-report.bbl

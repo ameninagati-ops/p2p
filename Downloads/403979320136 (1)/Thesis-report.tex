@@ -1,0 +1,231 @@
+\documentclass[11pt,titlepage,a4paper,openany]{book}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Arial}
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{overpic}
+\usepackage{color}
+\usepackage{rotate}
+
+\usepackage[most]{tcolorbox}
+\usepackage{multirow}
+\usepackage{mymacros}
+\usepackage{makeidx}
+\usepackage{pdfpages}
+\usepackage{lscape}
+\input{PhS_Header}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{latexsym}
+\usepackage{algorithm}
+\usepackage{minitoc}
+\dominitoc
+\setcounter{minitocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+\usepackage[babel=true]{csquotes}
+\usepackage{setspace}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{15pt}
+\onehalfspacing
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup{skip=4pt}
+\usepackage{verbatim}
+
+\setstretch{1.15}
+\graphicspath{{figures/}}
+
+\definecolor{grisclair}{gray}{0.2}
+\definecolor{light-gary}{gray}{0.95}
+\definecolor{lgray}{gray}{0.85}
+\definecolor{gris}{gray}{0.45}
+
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{Thesis-report.bib}
+\addbibresource{webographie.bib}
+\usepackage{titlesec}
+
+\titlespacing*{\section}{0pt}{0.4cm}{0.2cm}
+\titlespacing*{\subsection}{0pt}{0.3cm}{0.15cm}
+\titlespacing*{\subsubsection}{0pt}{0.2cm}{0.1cm}
+
+\setlength{\textfloatsep}{10pt}
+\setlength{\floatsep}{8pt}
+\setlength{\intextsep}{8pt}
+
+\setlength{\parskip}{0.1cm}
+
+\renewcommand{\baselinestretch}{1.05}
+\oddsidemargin 10.0mm
+\evensidemargin 10.0mm
+\textheight 220.0mm
+\textwidth 145.0mm
+
+\newenvironment{remarque}{\textbf{Remark:}}{}
+
+\newlength{\longueurequation}
+\newlength{\longueurrestante}
+
+\newcommand{\me}[1]{%
+\longueurrestante=\linegoal%
+\settowidth{\longueurequation}{$#1$}%
+\ifthenelse{\longueurequation>\longueurrestante}{\begin{displaymath} #1 \end{displaymath}}{$#1$}%
+}
+
+\setlength\belowcaptionskip{0.25cm}
+\everymath{\displaystyle}
+\makeatletter
+\renewcommand{\@chapapp}{Chapitre}
+\makeatother
+\renewcommand{\chaptername}{Chapitre}
+\renewcommand{\tablename}{Tableau}
+
+\begin{document}
+
+\includepdf[pages=1]{Chapitres/page_garde.pdf}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+	
+	\vspace*{5cm}
+	
+	{\Huge \textarabic{يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُواْ مِنكُمْ وَٱلَّذِينَ أُوتُواْ ٱلْعِلْمَ دَرَجَٰتٍۚ}}
+	
+	\vspace{0.8cm}
+	
+	{\Large \textarabic{سورة المجادلة ـ الآية 11}}
+	
+	\vspace{2cm}
+	
+	\begin{minipage}{0.8\textwidth}
+		\centering
+		\Large\itshape
+		« Allah élèvera en degrés ceux d’entre vous qui ont cru et ceux qui ont reçu le savoir. »
+	\end{minipage}
+	
+	\vspace{0.8cm}
+	
+	{\large Sourate Al-Mujadila -- Verset 11}
+	
+	\vfill
+	
+	\rule{0.5\textwidth}{0.5pt}
+	
+	\vspace{0.5cm}
+	
+	{\normalsize\itshape
+		Le savoir est un chemin vers l’élévation, la responsabilité et la lumière.
+	}
+	
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+\include{Chapitres/Declaration}
+
+\thispagestyle{empty}
+\include{Chapitres/dedication}
+
+\thispagestyle{empty}
+\include{Chapitres/Acknowledgements}
+
+\thispagestyle{empty}
+\include{Chapitres/Abstract}
+
+\pagestyle{headings}
+\pagenumbering{roman}
+
+\tableofcontents
+%\listoftables
+\thispagestyle{empty}
+%\listoffigures
+\thispagestyle{empty}
+
+\include{Chapitres/Notations}
+
+\pagenumbering{arabic}
+
+\include{Chapitres/Introduction}
+\include{Chapitres/Chapitre1}
+\include{Chapitres/Chapitre2}
+\include{Chapitres/Chapitre3}
+\include{Chapitres/Chapitre4}
+\include{Chapitres/Chapitre5}
+\include{Chapitres/Conclusion}
+
+%\printbibliography[nottype=online, title=Bibliographie]
+%\printbibliography[type=online, title=Webographie]
+%\chapter*{Bibliographie}
+%\addcontentsline{toc}{chapter}{Bibliographie}
+\begin{thebibliography}{99}
+	
+	\bibitem{react}
+	Disponible sur :
+	\url{https://react.dev/}
+	
+	\bibitem{fastapi}
+	Disponible sur :
+	\url{https://fastapi.tiangolo.com/}
+	
+	\bibitem{postgresql}
+	Disponible sur :
+	\url{https://www.postgresql.org/}
+	
+	\bibitem{pgadmin}
+	Disponible sur :
+	\url{https://www.pgadmin.org/}
+	
+	\bibitem{staruml}
+	Disponible sur :
+	\url{https://staruml.io/}
+	
+	\bibitem{n8n}
+	Disponible sur :
+	\url{https://n8n.io/}
+	
+	\bibitem{postman}
+	Disponible sur :
+	\url{https://www.postman.com/}
+	
+	\bibitem{vscode}
+	Disponible sur :
+	\url{https://code.visualstudio.com/}
+	
+	\bibitem{github}
+	Disponible sur :
+	\url{https://github.com/}
+	
+	\bibitem{ibm}
+	Disponible sur :
+	\url{https://www.ibm.com/topics/three-tier-architecture}
+	
+	\bibitem{mvc}
+	Disponible sur :
+	\url{https://developer.mozilla.org/en-US/docs/Glossary/MVC}
+	
+\end{thebibliography}
+
+\end{document}

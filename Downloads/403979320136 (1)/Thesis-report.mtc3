@@ -1,0 +1,30 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Introduction}{\reset@font\mtcSfont 25}{section.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Backlog du Sprint}{\reset@font\mtcSfont 25}{section.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Analyse}{\reset@font\mtcSfont 26}{section.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Analyse fonctionnelle}{\reset@font\mtcSSfont 26}{subsection.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.3.1.1}Diagramme de cas d’utilisation}{\reset@font\mtcSSSfont 26}{subsubsection.3.3.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.3.1.2}Description textuelle des cas d’utilisation}{\reset@font\mtcSSSfont 27}{subsubsection.3.3.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Analyse dynamique}{\reset@font\mtcSSfont 29}{subsection.3.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.3.2.1}Diagramme de séquence système du cas d’utilisation « S’authentifier »}{\reset@font\mtcSSSfont 29}{subsubsection.3.3.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.3.2.2}Diagramme de séquence système du cas d’utilisation « Gérer les utilisateurs »}{\reset@font\mtcSSSfont 29}{subsubsection.3.3.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Conception}{\reset@font\mtcSfont 31}{section.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Conception statique}{\reset@font\mtcSSfont 31}{subsection.3.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.1.1}Diagramme de classes du Sprint 1}{\reset@font\mtcSSSfont 31}{subsubsection.3.4.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.2}Conception dynamique}{\reset@font\mtcSSfont 31}{subsection.3.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.2.1}Diagramme de séquence détaillé du cas d’utilisation « S’authentifier »}{\reset@font\mtcSSSfont 31}{subsubsection.3.4.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.2.2}Diagramme de séquence détaillé du cas d’utilisation « Gérer les utilisateurs »}{\reset@font\mtcSSSfont 32}{subsubsection.3.4.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Implémentation}{\reset@font\mtcSfont 33}{section.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.1}Dictionnaire de données}{\reset@font\mtcSSfont 33}{subsection.3.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.5.1.1}Table utilisateur}{\reset@font\mtcSSSfont 33}{subsubsection.3.5.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.5.1.2}Table importation}{\reset@font\mtcSSSfont 33}{subsubsection.3.5.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.6}Réalisation}{\reset@font\mtcSfont 33}{section.3.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.1}Interfaces utilisateur}{\reset@font\mtcSSfont 33}{subsection.3.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.6.1.1}Interface de connexion}{\reset@font\mtcSSSfont 33}{subsubsection.3.6.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.6.1.2}Interface de liste des utilisateurs}{\reset@font\mtcSSSfont 34}{subsubsection.3.6.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.6.1.3}Interface d’ajout d’un utilisateur}{\reset@font\mtcSSSfont 34}{subsubsection.3.6.1.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.6.1.4}Interface de modification d’un utilisateur}{\reset@font\mtcSSSfont 35}{subsubsection.3.6.1.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.6.1.5}Interface d’importation des factures}{\reset@font\mtcSSSfont 35}{subsubsection.3.6.1.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.6.1.6}Interface d’affichage des résultats OCR}{\reset@font\mtcSSSfont 35}{subsubsection.3.6.1.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.7}Tests Postman}{\reset@font\mtcSfont 36}{section.3.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.7.1}Revue de Sprint}{\reset@font\mtcSSfont 37}{subsection.3.7.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.8}Conclusion}{\reset@font\mtcSfont 38}{section.3.8}}

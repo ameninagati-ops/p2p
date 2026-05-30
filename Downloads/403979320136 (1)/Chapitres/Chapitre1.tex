@@ -1,0 +1,319 @@
+\chapter{Cadre général du projet}
+
+%====================================================
+\section{Introduction}
+%====================================================
+
+Le premier chapitre présente le contexte général du projet. Nous commençons par une présentation de l’entreprise d’accueil, puis nous décrivons le projet, la problématique étudiée ainsi que la solution proposée. Enfin, nous présentons la méthodologie adoptée durant le développement.
+
+%====================================================
+\section{Présentation de l’entreprise}
+%====================================================
+
+Le projet a été réalisé au sein de l’entreprise \textbf{Virtual Dev}, une société spécialisée dans le développement des applications web et des solutions intelligentes. L’entreprise accompagne les organisations dans leur transformation digitale à travers des solutions innovantes basées sur les technologies modernes et l’intelligence artificielle.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.15\textwidth]{logo_virtualdev.png}
+	\caption{Logo de l’entreprise Virtual Dev}
+	\label{fig:logo_virtualdev}
+\end{figure}
+
+\FloatBarrier
+
+%====================================================
+\subsection{Domaines d’intervention}
+%====================================================
+
+Virtual Dev possède plusieurs domaines d’intervention dans le secteur des technologies numériques. L’entreprise travaille notamment dans le développement web, les plateformes SaaS, l’intelligence artificielle, l’automatisation des processus métiers, l’analyse des données ainsi que les systèmes de gestion, comme présenté dans la figure \ref{fig:domaines_intervention}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{domaines_intervention_simple.png}
+	\caption{Principaux domaines d’intervention de l’entreprise}
+	\label{fig:domaines_intervention}
+\end{figure}
+
+\FloatBarrier
+
+%====================================================
+\section{Objectif du projet}
+%====================================================
+
+L’objectif principal de ce projet est de concevoir et développer une plateforme intelligente permettant l’automatisation du processus de traitement des factures et des opérations financières au sein d’une entreprise.
+
+Cette solution vise à réduire les tâches manuelles, améliorer la rapidité de traitement des documents et limiter les erreurs humaines grâce à l’intégration des technologies d’intelligence artificielle et de reconnaissance optique de caractères (OCR).
+
+La plateforme développée permet également de centraliser les informations financières, gérer les utilisateurs selon leurs rôles, assurer le suivi des validations et des actions effectuées, ainsi que faciliter la consultation et l’analyse des données via des tableaux de bord interactifs. À travers ce projet, nous cherchons à offrir une solution moderne, sécurisée et performante capable d’optimiser la gestion financière et d’améliorer la productivité des utilisateurs.
+
+%====================================================
+\section{Étude de l’existant}
+
+\subsection{Contexte}
+%====================================================
+
+Le traitement manuel des factures fournisseurs reste une tâche longue et répétitive. Les utilisateurs doivent vérifier les informations, saisir les données et suivre les validations financières. Ce mode de fonctionnement entraîne plusieurs problèmes tels que les retards de traitement, les erreurs humaines, la difficulté de détecter les anomalies ainsi qu’un manque de traçabilité des opérations. De plus, l’absence d’automatisation réduit l’efficacité du processus et augmente le risque d’erreurs dans la gestion financière, comme illustré dans la figure \ref{fig:processus_actuel}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{processus_actuel.jpg}
+	\caption{Processus actuel de traitement manuel des factures}
+	\label{fig:processus_actuel}
+\end{figure}
+
+\FloatBarrier
+
+%====================================================
+\section{Problématique}
+%====================================================
+
+Dans un contexte de transformation numérique des entreprises, la gestion manuelle des factures et des documents financiers représente encore une contrainte importante pour plusieurs organisations.
+
+Les processus traditionnels basés sur la saisie manuelle des données, la vérification humaine et le traitement papier engendrent des pertes de temps, des erreurs de saisie ainsi qu’un manque de traçabilité des opérations financières.
+
+De plus, la multiplication des documents à traiter rend le suivi des validations et des décisions financières plus complexe, ce qui impacte la productivité et la fiabilité des services comptables et administratifs.
+
+Par ailleurs, l’absence d’un système intelligent capable d’automatiser l’extraction et l’analyse des données des factures limite la rapidité de traitement et augmente les risques d’erreurs.
+
+Les entreprises ont alors besoin d’une solution moderne permettant d’automatiser les différentes étapes du processus d’achat et de validation financière tout en assurant la sécurité, la centralisation des informations et la traçabilité des actions effectuées.
+
+Afin de répondre à ces besoins, notre projet consiste à développer une plateforme intelligente basée sur l’intelligence artificielle et les technologies OCR permettant l’automatisation du traitement des factures, la gestion des utilisateurs, le suivi des validations financières ainsi que la visualisation des données à travers des tableaux de bord interactifs.
+
+%====================================================
+\section{Solution proposée}
+%====================================================
+
+Afin de répondre aux problématiques identifiées, nous proposons une plateforme intelligente dédiée à l’automatisation du traitement des factures fournisseurs.
+Cette solution repose sur l’intégration des technologies OCR et de l’intelligence artificielle afin d’extraire, analyser et valider automatiquement les données financières. La plateforme permet également d’assurer la gestion des utilisateurs, le suivi des validations, la centralisation des informations ainsi que la visualisation des statistiques à travers des tableaux de bord interactifs. L’objectif principal de cette solution est d’améliorer la rapidité, la fiabilité et la traçabilité des opérations financières au sein de l’entreprise.
+
+%====================================================
+\subsection{Workflow global du système}
+%====================================================
+
+Le workflow global du système présenté ci-dessous illustre les différentes étapes du traitement automatisé des factures au sein de la plateforme. Il décrit le processus depuis l’importation des documents, l’extraction et l’analyse des données par OCR et intelligence artificielle, jusqu’à la validation financière, la visualisation des statistiques et l’archivage des informations traitées. Cette automatisation permet de réduire le temps de traitement, limiter les erreurs humaines, améliorer la traçabilité des opérations et faciliter la prise de décision financière. Elle offre également une meilleure organisation des données ainsi qu’un suivi plus efficace des factures, comme présenté dans la figure \ref{fig:workflow}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{workflow_systeme.jpg}
+	\caption{Workflow global du système}
+	\label{fig:workflow}
+\end{figure}
+
+\FloatBarrier
+
+%====================================================
+\subsection{Architecture générale}
+%====================================================
+
+L’architecture générale de la solution proposée repose sur une organisation modulaire permettant d’assurer la communication entre les différentes composantes du système. Elle intègre une interface frontend pour les utilisateurs, un backend assurant la logique métier, une base de données pour le stockage des informations ainsi que des services d’intelligence artificielle et d’OCR destinés au traitement automatisé des factures. comme illustré dans la figure \ref{fig:architecture_generale}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{architecture_generale.jpg}
+	\caption{Architecture générale de la solution proposée}
+	\label{fig:architecture_generale}
+\end{figure}
+
+\FloatBarrier
+
+%====================================================
+\section{Méthodologie de travail}
+%====================================================
+
+Dans le cadre de ce projet, nous avons étudié deux approches de gestion de projet : les méthodologies classiques et les méthodologies agiles.
+
+Les méthodes classiques reposent sur une organisation séquentielle des phases du projet, tandis que les méthodes agiles offrent plus de flexibilité et permettent une amélioration progressive des fonctionnalités tout au long du développement.
+
+%====================================================
+\subsection{Étude comparative}
+%====================================================
+
+Avant de choisir la méthodologie adaptée à notre projet, nous avons réalisé une comparaison entre les méthodes traditionnelles et les méthodes agiles afin d’identifier l’approche la plus convenable. Cette comparaison porte sur plusieurs critères tels que le cycle de vie, la planification, la gestion des changements et la livraison des fonctionnalités, comme présenté dans le tableau \ref{tab:comparaison_methodes}.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.6}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}m{3.5cm}|X|X|}
+		\hline
+		
+		\rowcolor{gray!25}
+		\textbf{Critère} &
+		\textbf{Méthodes classiques} &
+		\textbf{Méthodes agiles}
+		\\ \hline
+		
+		Cycle de vie &
+		Linéaire et séquentiel. &
+		Itératif et incrémental.
+		\\ \hline
+		
+		Planification &
+		Prévue dès le début. &
+		Adaptative et flexible.
+		\\ \hline
+		
+		Documentation &
+		Documentation exhaustive. &
+		Documentation légère.
+		\\ \hline
+		
+		Organisation &
+		Structure hiérarchique. &
+		Équipe collaborative.
+		\\ \hline
+		
+		Gestion des changements &
+		Changements difficiles à intégrer. &
+		Changements intégrés naturellement.
+		\\ \hline
+		
+		Livraison &
+		Livraison finale unique. &
+		Livraisons progressives.
+		\\ \hline
+		
+		Gestion des risques &
+		Détection tardive des risques. &
+		Détection rapide des risques.
+		\\ \hline
+		
+	\end{tabularx}
+	
+	\caption{Comparaison entre les méthodes traditionnelles et agiles}
+	\label{tab:comparaison_methodes}
+	
+\end{table}
+
+Après cette comparaison, nous avons choisi la méthodologie agile car elle permet une meilleure flexibilité, un suivi continu des tâches et une adaptation rapide aux besoins du projet.
+
+Cette approche facilite également la collaboration au sein de l’équipe et la livraison progressive des fonctionnalités.
+
+%====================================================
+\subsection{Méthodes agiles}
+%====================================================
+
+Les méthodes agiles représentent une approche moderne de gestion de projet basée sur la flexibilité, la collaboration et l’amélioration continue.
+
+Elles permettent de développer les fonctionnalités progressivement tout en s’adaptant rapidement aux changements et aux besoins du client.
+
+Il existe plusieurs méthodologies agiles utilisées dans le domaine du développement logiciel, parmi lesquelles Scrum, Kanban, Extreme Programming (XP) et Lean Software Development.
+
+Ces méthodologies partagent les mêmes principes agiles mais diffèrent dans leur organisation et leurs pratiques de travail.
+
+%====================================================
+\subsection{Pourquoi Scrum}
+%====================================================
+
+Afin de choisir la méthodologie agile la plus adaptée à notre projet, nous avons réalisé une comparaison entre plusieurs méthodes agiles connues telles que Scrum, Kanban et XP.
+
+Cette comparaison met en évidence les différences au niveau de l’organisation, de la planification, du suivi et des objectifs de chaque méthode, comme présenté dans le tableau \ref{tab:methodes_agiles}.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	
+	\begin{tabularx}{\textwidth}{|p{3cm}|X|X|X|}
+		\hline
+		
+		\rowcolor{green!20}
+		\textbf{Critère} &
+		\textbf{SCRUM} &
+		\textbf{Kanban} &
+		\textbf{XP}
+		\\ \hline
+		
+		Organisation &
+		Travail organisé en sprints. &
+		Flux continu. &
+		Développement orienté programmation.
+		\\ \hline
+		
+		Planification &
+		Sprint planning. &
+		Flexible. &
+		Flexible.
+		\\ \hline
+		
+		Suivi &
+		Réunions quotidiennes. &
+		Tableau visuel. &
+		Tests fréquents.
+		\\ \hline
+		
+		Objectif &
+		Gestion efficace du projet. &
+		Optimisation du flux. &
+		Qualité du code.
+		\\ \hline
+		
+	\end{tabularx}
+	
+	\caption{Comparaison entre les méthodes agiles}
+	\label{tab:methodes_agiles}
+	
+\end{table}
+
+%====================================================
+\subsection{SCRUM}
+%====================================================
+
+La méthodologie SCRUM a été adoptée dans le cadre de ce projet afin d’assurer une gestion agile et efficace des différentes phases de développement.
+
+Cette approche permet d’organiser le travail en plusieurs sprints tout en favorisant la collaboration entre les membres de l’équipe, le suivi continu des tâches et l’amélioration progressive des fonctionnalités développées.
+
+SCRUM repose sur plusieurs éléments essentiels tels que le Product Backlog, qui regroupe l’ensemble des besoins et fonctionnalités du projet, ainsi que le Sprint Backlog qui contient les tâches à réaliser durant chaque sprint.
+
+Chaque sprint possède une durée limitée et se termine par une version fonctionnelle du système.
+
+Cette méthodologie facilite également la communication entre les membres de l’équipe grâce aux réunions régulières appelées Daily Scrum, permettant de suivre l’avancement du projet et de résoudre rapidement les problèmes rencontrés.
+
+De plus, SCRUM offre une grande flexibilité face aux changements et améliore la qualité du produit final grâce aux tests et validations réalisés à chaque sprint. Le cycle de vie de la méthode SCRUM adopté dans notre projet est illustré dans la figure \ref{fig:scrum_cycle}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{scrum_cycle.jpg}
+	\caption{Cycle de vie de la méthode SCRUM}
+	\label{fig:scrum_cycle}
+\end{figure}
+
+\FloatBarrier
+
+%====================================================
+\section{Langage de modélisation}
+%====================================================
+
+Avant de commencer la phase de développement, il est nécessaire de réaliser une étape d’analyse et de conception afin de mieux comprendre le fonctionnement du système et d’organiser les différentes fonctionnalités.
+
+Dans notre projet, nous avons adopté le langage UML (\textit{Unified Modeling Language}) comme outil principal de modélisation. UML permet de représenter graphiquement les besoins fonctionnels, les interactions entre les acteurs ainsi que la structure globale du système. La figure \ref{fig:uml_modelisation} présente les principaux types de diagrammes UML utilisés pour modéliser notre système, notamment les diagrammes de cas d’utilisation, de classes et de séquence.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.25\textwidth]{uml_modelisation.jpg}
+	\caption{Principaux diagrammes UML utilisés}
+	\label{fig:uml_modelisation}
+\end{figure}
+
+
+
+L’utilisation de la modélisation UML offre plusieurs avantages :
+
+\begin{itemize}
+	
+	\item Faciliter la compréhension du système ;
+	
+	\item Structurer les fonctionnalités du projet ;
+	
+	\item Simplifier la communication entre les membres de l’équipe ;
+	
+	\item Préparer la phase de développement ;
+	
+	\item Assurer une meilleure organisation des composants du système.
+	
+\end{itemize}
+
+%====================================================
+\section{Conclusion}
+%====================================================
+
+Dans ce chapitre, nous avons présenté le cadre général de notre projet à travers une présentation de l’entreprise d’accueil, du contexte général ainsi que de la problématique étudiée. Nous avons également décrit la solution proposée, l’architecture générale du système, la méthodologie de travail adoptée ainsi que le langage de modélisation utilisé durant les phases d’analyse et de conception.

@@ -1,0 +1,31 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Introduction}{\reset@font\mtcSfont 40}{section.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Backlog du Sprint}{\reset@font\mtcSfont 40}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Analyse}{\reset@font\mtcSfont 40}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.1}Analyse fonctionnelle}{\reset@font\mtcSSfont 40}{subsection.4.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.1.1}Diagramme de cas d’utilisation}{\reset@font\mtcSSSfont 40}{subsubsection.4.3.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.1.2}Description textuelle des cas d’utilisation}{\reset@font\mtcSSSfont 42}{subsubsection.4.3.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Analyse dynamique}{\reset@font\mtcSSfont 44}{subsection.4.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.2.1}Diagramme de séquence système du cas d’utilisation « Consulter les extractions »}{\reset@font\mtcSSSfont 44}{subsubsection.4.3.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.2.2}Diagramme de séquence système du cas d’utilisation « Gérer les factures »}{\reset@font\mtcSSSfont 45}{subsubsection.4.3.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Conception}{\reset@font\mtcSfont 46}{section.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.1}Conception statique}{\reset@font\mtcSSfont 46}{subsection.4.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.4.1.1}Diagramme de classes du Sprint 2}{\reset@font\mtcSSSfont 46}{subsubsection.4.4.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.2}Conception dynamique}{\reset@font\mtcSSfont 47}{subsection.4.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.4.2.1}Diagramme de séquence détaillé du cas d’utilisation « Consulter les extractions »}{\reset@font\mtcSSSfont 47}{subsubsection.4.4.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.4.2.2}Diagramme de séquence détaillé du cas d’utilisation « Gérer les factures »}{\reset@font\mtcSSSfont 47}{subsubsection.4.4.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Implémentation}{\reset@font\mtcSfont 48}{section.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.1}Dictionnaire de données}{\reset@font\mtcSSfont 48}{subsection.4.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.5.1.1}Table facture}{\reset@font\mtcSSSfont 48}{subsubsection.4.5.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.5.1.2}Table dashboard}{\reset@font\mtcSSSfont 48}{subsubsection.4.5.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Réalisation}{\reset@font\mtcSfont 48}{section.4.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.7}Interfaces utilisateur}{\reset@font\mtcSfont 48}{section.4.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.7.0.1}Interface de consultation des résultats d’extraction}{\reset@font\mtcSSSfont 48}{subsubsection.4.7.0.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.7.0.2}Interface des factures en attente}{\reset@font\mtcSSSfont 49}{subsubsection.4.7.0.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.7.0.3}Interface des factures validées}{\reset@font\mtcSSSfont 49}{subsubsection.4.7.0.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.7.0.4}Interface des factures anomalies}{\reset@font\mtcSSSfont 50}{subsubsection.4.7.0.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.7.0.5}Interface du tableau de bord}{\reset@font\mtcSSSfont 50}{subsubsection.4.7.0.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.7.0.6}Interface de configuration des seuils IA}{\reset@font\mtcSSSfont 51}{subsubsection.4.7.0.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.7.1}Tests Postman}{\reset@font\mtcSSfont 51}{subsection.4.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.7.2}Revue de Sprint}{\reset@font\mtcSSfont 53}{subsection.4.7.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Burndown Chart :}{\reset@font\mtcPfont 54}{subsection.4.7.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.8}Conclusion}{\reset@font\mtcSfont 54}{section.4.8}}
